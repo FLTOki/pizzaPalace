@@ -1,4 +1,4 @@
-var price = function
+var price = 
 {
   large : 2000,
   medium : 1500,
@@ -40,7 +40,9 @@ $(document).ready(function()
       $("#show-order").show();
       $(".meat").text(newPizza.meatBase);
       $(".top").text(newPizza.topping);
-      $(".base").text(newPizza.base);    
+      $(".base").text(newPizza.base);  
+      $(".time").text(totalTime);
+      $(".cost").text(totalCost);  
     });
   });
 });
