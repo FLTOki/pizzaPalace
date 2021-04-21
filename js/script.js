@@ -11,10 +11,19 @@ function Pizza(meatBase, topping, base) {
   this.base = base;
 }
 
-function Location(street, house, area) {
-  this.street = street;
-  this.city = city;
-  this.area = area;
+function Location(estate, houseNumber, phoneNumber) {
+  this.estate = estate;
+  this.houseNumber = houseNumber;
+  this.phoneNumber = phoneNumber;
+}
+
+Pizza.prototype.fullOrder = function()
+  {
+    return this.meatBase + " " + this.topping + " " + this.base;
+  }
+
+Location.prototype.fullAddress = function() {
+  return this.estate + ", " + this.houseNumber + ", " + this.phoneNumber;
 }
 
 function resetFields() {
@@ -34,10 +43,15 @@ $(document).ready(function()
     var inputtedCrust = $('select#base_type').val();
     var quantity = $('input#quantity').val();
 
+    var inputtedEstate = $("input.estate").val();
+    var inputtedHouse = $("input.houseNumber").val();
+    var inputtedPhone = $("input.phoneNumber").val();
+
     var totalTime = (parseInt(quantity) * 15 + 60);
     var totalCost = (parseInt(quantity) * 2000);
 
     var newPizza = new Pizza(inputtedMeat, inputtedTop, inputtedCrust);
+    var newLocation = new Location(inputtedEstate, inputtedHouse, inputtedPhone);
     console.log(newPizza);
     console.log(totalTime);
 
