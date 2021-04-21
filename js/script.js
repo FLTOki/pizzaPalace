@@ -32,17 +32,22 @@ $(document).ready(function()
     var inputtedMeat = $("select#meat_type").val();
     var inputtedTop = $("select#topping_type").val();
     var inputtedCrust = $('select#base_type').val();
+    var quantity = $('input#quantity').val();
+
+    var totalTime = (parseInt(quantity) * 15 + 60);
+    var totalCost = (parseInt(quantity) * 2000);
 
     var newPizza = new Pizza(inputtedMeat, inputtedTop, inputtedCrust);
     console.log(newPizza);
+    console.log(totalTime);
 
-    $("#order").last().click(function() {
+    $("#submit").last().click(function() {
       $("#show-order").show();
       $(".meat").text(newPizza.meatBase);
       $(".top").text(newPizza.topping);
       $(".base").text(newPizza.base);  
-      $(".time").text(totalTime);
-      $(".cost").text(totalCost);  
+      $(".time").text(totalTime + " minutes");
+      $(".cost").text("Ksh. " +totalCost);  
     });
   });
 });
