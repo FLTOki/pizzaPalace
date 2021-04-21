@@ -1,0 +1,18 @@
+h2
+{
+  padding-bottom: 30px;
+  align-items: center;
+  text-align: center;
+}
+.large_pizza, .medium_pizza, .small_pizza
+{
+  padding-bottom: 30px;
+}
+
+.row
+{
+  padding: 20px;
+  border: 2px solid;
+  border-radius: 10px;
+  box-shadow: 5px 10px rgb(95, 95, 247);
+}
