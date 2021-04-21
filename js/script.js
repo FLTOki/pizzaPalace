@@ -9,6 +9,7 @@ function Pizza(meatBase, topping, base) {
   this.meatBase = meatBase;
   this.topping = topping;
   this.base = base;
+  this.location = [];
 }
 
 function Location(estate, houseNumber, phoneNumber) {
@@ -43,17 +44,10 @@ $(document).ready(function()
     var inputtedCrust = $('select#base_type').val();
     var quantity = $('input#quantity').val();
 
-    var inputtedEstate = $("input.estate").val();
-    var inputtedHouse = $("input.houseNumber").val();
-    var inputtedPhone = $("input.phoneNumber").val();
-
     var totalTime = (parseInt(quantity) * 15 + 60);
     var totalCost = (parseInt(quantity) * 2000);
 
     var newPizza = new Pizza(inputtedMeat, inputtedTop, inputtedCrust);
-    var newLocation = new Location(inputtedEstate, inputtedHouse, inputtedPhone);
-    console.log(newPizza);
-    console.log(totalTime);
 
     $("#submit").last().click(function() {
       $("#show-order").show();
@@ -69,6 +63,17 @@ $(document).ready(function()
       $("#show-address").show();
     });
 
+    var inputtedEstate = $("input.estate").val();
+    var inputtedHouse = $("input.houseNumber").val();
+    var inputtedPhone = $("input.phoneNumber").val();
+
+    var newLocation = new Location(inputtedEstate, inputtedHouse, inputtedPhone);
+
+    console.log(newLocation);
+
+    newPizza.location.push(newLocation);
+
+
     $("#no").last().click(function()
     {
       alert("Order has been placed successfully. You will be notified when ready");
@@ -76,7 +81,9 @@ $(document).ready(function()
 
     $("#confirm").last().click(function()
     {
-      alert("Order has been placed successfully. It will be delivered in " + totalTime + " minutes, to " + Location.fullAddress);
+      alert("Order has been placed successfully. It will be delivered in " + totalTime + " minutes, to " + inputtedEstate +
+      " House number " + inputtedHouse);
+      alert(newPizza.location);
     });
   });
 });
