@@ -68,5 +68,15 @@ $(document).ready(function()
     {
       $("#show-address").show();
     });
+
+    $("#no").last().click(function()
+    {
+      alert("Order has been placed successfully. You will be notified when ready");
+    });
+
+    $("#confirm").last().click(function()
+    {
+      alert("Order has been placed successfully. It will be delivered in " + totalTime + " minutes, to " + Location.fullAddress);
+    });
   });
 });
