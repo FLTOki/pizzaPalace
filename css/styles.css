@@ -1,9 +1,23 @@
+.container
+{
+  padding-top: 50px;
+  width: 800px;
+}
+.welcome
+{
+  background-image: url('../assets/images/welcome.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 300px;
+}
+
 h2
 {
   padding-bottom: 30px;
   align-items: center;
   text-align: center;
 }
+
 .large_pizza, .medium_pizza, .small_pizza
 {
   padding-bottom: 30px;
