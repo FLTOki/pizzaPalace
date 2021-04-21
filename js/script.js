@@ -49,5 +49,10 @@ $(document).ready(function()
       $(".time").text(totalTime + " minutes");
       $(".cost").text("Ksh. " +totalCost);  
     });
+
+    $('#yes').last().click(function()
+    {
+      $("#show-address").show();
+    });
   });
 });

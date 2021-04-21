@@ -62,13 +62,40 @@
   </form>
 
   <!-- <button class="btn btn-primary" >Show Order</button> -->
-  <div id="show-order" class="contain form-group">
-    <h3>This is your order</h3>
-    <p>Base Meat Type: <span class="meat"></span></p>
-    <p>Topping Type: <span class="top"></span></p>
-    <p>Base Type:<span class="base"></span></p>
-    <p>Preparation Time:<span class="time"></span></p>
-    <p>Total Cost:<span class="cost"></span></p>
+  <div class="container">
+    <div id="show-order">
+      <h3>This is your order</h3>
+      <p>Base Meat Type: <span class="meat"></span></p>
+      <p>Topping Type: <span class="top"></span></p>
+      <p>Base Type:<span class="base"></span></p>
+      <p>Preparation Time:<span class="time"></span></p>
+      <p>Total Cost:<span class="cost"></span></p>
+      <div class="form-group">
+        <label for="delivery">Would you like your order delivered?</label>
+        <button class="btn btn-primary" id="yes">Yes</button>
+        <button class="btn btn-warning" id="no">No</button>
+      </div>
+    </div>
+  
+    <div id="show-address">
+      <p>Please fill in contact and location details</p>
+      <p>*delivery fee is Ksh. 200</p>
+      <div class="form-group">
+        <label for="estate">Estate</label>
+        <input type="text" class="form-control estate">
+      </div>
+      <div class="form-group">
+        <label for="house-number">House Number</label>
+        <input type="text" class="form-control house-number">
+      </div>
+      <div class="form-group">
+        <label for="phone-number">Phone Number</label>
+        <input type="text" class="form-control phone-number">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary">Confirm</button>
+      </div>
+    </div>
   </div>
 </body>
 </html>
