@@ -63,9 +63,9 @@ $(document).ready(function()
       $("#show-address").show();
     });
 
-    var inputtedEstate = $("input.estate").val();
-    var inputtedHouse = $("input.houseNumber").val();
-    var inputtedPhone = $("input.phoneNumber").val();
+    var inputtedEstate = $("input#estate").val();
+    var inputtedHouse = $("input#houseNumber").val();
+    var inputtedPhone = $("input#phoneNumber").val();
 
     var newLocation = new Location(inputtedEstate, inputtedHouse, inputtedPhone);
 
@@ -83,7 +83,7 @@ $(document).ready(function()
     {
       alert("Order has been placed successfully. It will be delivered in " + totalTime + " minutes, to " + inputtedEstate +
       " House number " + inputtedHouse);
-      alert(newPizza.location);
+      // alert(newPizza.location);
     });
   });
 });
