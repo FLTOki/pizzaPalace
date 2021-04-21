@@ -12,49 +12,56 @@
   <title>Large Pizzas</title>
 </head>
 <body>
-  <form action="">
+  <form action="" id="new_pizza">
     <h2>Please choose the options you'd like below</h2>
 
     <div class="container">
 
       <div class="form-group">
         <label for="meat_type">Base Meat Type</label>
-        <select class="form-select form-control" aria-label=".form-select-lg example" required>
+        <select class="form-select form-control" aria-label=".form-select-lg example" required id="meat_type">
           <option selected>Please Select One:</option>
-          <option value="1">Beef</option>
-          <option value="2">Chicken</option>
-          <option value="3">Pork</option>
+          <option value="Beef">Beef</option>
+          <option value="Chicken">Chicken</option>
+          <option value="Pork">Pork</option>
         </select>
       </div>
 
       <div class="form-group">
         <label for="topping_type">Toppings</label>
-        <select class="form-select form-control" aria-label=".form-select-lg example" required> 
+        <select class="form-select form-control" aria-label=".form-select-lg example" required id="topping_type"> 
           <option selected>Please Select One:</option>
-          <option value="1">Cheese</option>
-          <option value="2">Vegetables</option>
-          <option value="3">Sausages</option>
-          <option value="4">Pepperoni</option>
-          <option value="5">Mushrooms</option>
+          <option value="Cheese">Cheese</option>
+          <option value="Vegetables">Vegetables</option>
+          <option value="Sausages">Sausages</option>
+          <option value="Pepperoni">Pepperoni</option>
+          <option value="Mushrooms">Mushrooms</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label for="topping_type">Bases</label>
-        <select class="form-select form-control" aria-label=".form-select-lg example" required>
+        <label for="base_type">Bases</label>
+        <select class="form-select form-control" aria-label=".form-select-lg example" required id="base_type">
           <option selected>Please Select One:</option>
-          <option value="1">Crusty</option>
-          <option value="2">Soft</option>
+          <option value="Crusty">Crusty</option>
+          <option value="Soft">Soft</option>
         </select>
       </div>
 
       <div class="form-group">
         <span class="btn btn-secondary" id="add-address">Another Pizza</span>
 
-        <button type="submit" class="btn btn-primary">Order</button>
+        <button type="submit" class="btn btn-primary" id="order">Order</button>
         <button type="reset" class="btn btn-warning">Cancel</button>
       </div>
     </div>
   </form>
+
+  <div id="show-order">
+    <h3>This is your order</h3>
+    <p>Base Meat Type: <span class="meat"></span></p>
+    <p>Topping Type: <span class="top"></span></p>
+    <p>Base Type:<span class="base"></span></p>
+  </div>
 </body>
 </html>
