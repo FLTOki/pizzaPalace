@@ -119,6 +119,12 @@ function Pizza(size, topping, base) {
   this.location = [];
 }
 
+function Location(estate, houseNumber, phoneNumber) {
+  this.estate = estate;
+  this.houseNumber = houseNumber;
+  this.phoneNumber = phoneNumber;
+}
+
 $(document).ready(function()
 {
   $('form#new_pizza').submit(function(event)
@@ -129,7 +135,7 @@ $(document).ready(function()
     var inputtedTop = $("select#topping_type").val();
     var inputtedCrust = $('select#base_type').val();
     var quantity = parseInt($('input#quantity').val());
-    var cost, totalCost;
+    var cost, totalCost, newLocation;
 
     if(inputtedSize ==="Large")
     {
@@ -221,6 +227,21 @@ $(document).ready(function()
       // $(".time").text(totalTime + " minutes");
       $(".cost").text("Ksh. " +totalCost);  
     });
+
+
+    $(".yes").click(function()
+    {
+      var inputtedEstate = prompt('Enter your estate'); 
+      var inputtedHouse = prompt("Enter your house number");
+      var inputtedPhone = prompt("Enter your phone number");
+
+      newLocation = new Location(inputtedEstate, inputtedHouse, inputtedPhone);
+      alert("we will deliver to your location");
+
+    });
+
+
+    // console.log(newPizza, totalCost, newLocation);
 
   });
 });
