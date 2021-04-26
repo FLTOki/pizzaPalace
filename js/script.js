@@ -95,8 +95,25 @@ var price =
   small : 1000
 }
 
-function Pizza(meatBase, topping, base) {
-  this.meatBase = meatBase;
+var toppings = 
+{
+  cheese: 350,
+  vegetables : 200,
+  pepperoni : 575,
+  sausages : 400,
+  mushrooms : 275
+}
+
+var crust = 
+{
+  hard : 200,
+  soft : 180
+}
+
+var delivery = 200;
+
+function Pizza(size, topping, base) {
+  this.size = size;
   this.topping = topping;
   this.base = base;
   this.location = [];
@@ -112,19 +129,98 @@ $(document).ready(function()
     var inputtedTop = $("select#topping_type").val();
     var inputtedCrust = $('select#base_type').val();
     var quantity = parseInt($('input#quantity').val());
-    var cost;
+    var cost, totalCost;
 
-    if(inputtedSize === "Large")
+    if(inputtedSize ==="Large")
     {
-      cost = price.large * quantity;
-      alert(cost);
+      if(inputtedTop == "Cheese"){
+        cost = price.large * quantity + toppings.cheese * quantity;
+      }
+      else if(inputtedTop == "Vegetables")
+      {
+        cost = price.large * quantity + toppings.vegetables * quantity;
+      }
+      else if(inputtedTop == "Mushrooms")
+      {
+        cost = price.large * quantity + toppings.mushrooms * quantity;
+      }
+      else if(inputtedTop == "Pepperoni")
+      {
+        cost = price.large * quantity + toppings.pepperoni * quantity;
+      }
+      else if(inputtedTop == "Sausages")
+      {
+        cost = price.large * quantity + toppings.sausages * quantity;
+      }
     }
-    else
+
+
+    else if(inputtedSize ==="Medium")
     {
-      alert('Error')
+      if(inputtedTop == "Cheese"){
+        cost = price.medium * quantity + toppings.cheese * quantity;
+      }
+      else if(inputtedTop == "Vegetables")
+      {
+        cost = price.medium * quantity + toppings.vegetables * quantity;
+      }
+      else if(inputtedTop == "Mushrooms")
+      {
+        cost = price.medium * quantity + toppings.mushrooms * quantity;
+      }
+      else if(inputtedTop == "Pepperoni")
+      {
+        cost = price.medium * quantity + toppings.pepperoni * quantity;
+      }
+      else if(inputtedTop == "Sausages")
+      {
+        cost = price.medium * quantity + toppings.sausages * quantity;
+      }
+    }
+    
+    else if(inputtedSize ==="Small")
+    {
+      if(inputtedTop == "Cheese"){
+        cost = price.small * quantity + toppings.cheese * quantity;
+      }
+      else if(inputtedTop == "Vegetables")
+      {
+        cost = price.small * quantity + toppings.vegetables * quantity;
+      }
+      else if(inputtedTop == "Mushrooms")
+      {
+        cost = price.small * quantity + toppings.mushrooms * quantity;
+      }
+      else if(inputtedTop == "Pepperoni")
+      {
+        cost = price.small * quantity + toppings.pepperoni * quantity;
+      }
+      else if(inputtedTop == "Sausages")
+      {
+        cost = price.small * quantity + toppings.sausages * quantity;
+      }
     }
 
+    if(inputtedCrust = "Hard")
+    {
+      totalCost = cost + crust.hard * quantity;
+    }
+    else{
+      totalCost = cost + crust.soft * quantity;
+    }
 
-    console.log(inputtedCrust, inputtedSize, inputtedTop, cost);
+    // console.log(inputtedCrust, inputtedSize, inputtedTop, cost, totalCost);
+
+    var newPizza = new Pizza(inputtedSize, inputtedTop, inputtedCrust);
+
+    $("#submit").last().click(function() {
+      $("#show-order").show();
+      $(".meat").text(newPizza.size);
+      $(".top").text(newPizza.topping);
+      $(".base").text(newPizza.base);  
+      // $(".time").text(totalTime + " minutes");
+      $(".cost").text("Ksh. " +totalCost);  
+    });
+
   });
 });
