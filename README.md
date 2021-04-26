@@ -36,7 +36,7 @@ Built by: Musyoki Jim.
 
 <p>Customers can chose what size of pizza they want, the preferred toppings and crust. The customers can also decide whether or not they want their pizza delivered</p>
 <a href="https://github.com/othneildrew/Best-README-Template">
-  <img src="assets/readme_images/intro_page.png" alt="Logo" width="850" height="650">
+  <img src="assets/images/landing_page.png" alt="Logo" width="850" height="650">
 </a>
 
 ### Built Using
@@ -50,16 +50,16 @@ I used the following resources in its development
 <p>
 This is the landing page
 </p>
-  <img src="assets/readme_images/about_us.png" width="800" height="500">
+  <img src="assets/images/landing_page.png" width="800" height="500">
 <p>
 Here, you can pick the type of pizza you want, each with their bases and toppings.
 </p>
-  <img src="assets/readme_images/what_we_do.png" width="800" height="300">
+  <img src="assets/images/choices.png" width="800" height="300">
 
 <p>
 This is the order section. You can specify all the options you need including the quantity. You will then be shown your order and the total cost including the delivery cost
 </p>
-  <img src="assets/readme_images/portfolio.png" width="800" height="500">
+  <img src="assets/images/orders.png" width="800" height="500">
 
 # License
 Distributed under the MIT License. See `LICENSE` for more information.
