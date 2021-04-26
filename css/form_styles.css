@@ -5,19 +5,12 @@
   padding: 50px;
   border-radius: 10px;
   background-color: inherit;
+  align-items: center;
+  border: none;
+  padding-top: 30px;
 }
 
 #show-order, #show-address
 {
   display: none;
-}
-
-
-.container
-{
-  width: 400px;
-  /* text-align: center; */
-  align-items: center;
-  border: none;
-  padding-top: 30px;
 }

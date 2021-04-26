@@ -9,6 +9,10 @@
   background-repeat: no-repeat;
   background-position: center;
   padding: 300px;
+  text-align: center;
+  font-size: 100px;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 h2
