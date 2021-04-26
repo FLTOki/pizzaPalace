@@ -31,7 +31,6 @@
 
 ## Author
 Built by: Musyoki Jim.
-[TestAuthor](https://github.com/Y2SEM2/IP3)
 ## About The Project
 
 <p>Customers can chose what size of pizza they want, the preferred toppings and crust. The customers can also decide whether or not they want their pizza delivered</p>
