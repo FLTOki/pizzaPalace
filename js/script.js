@@ -92,7 +92,8 @@ var price =
 {
   large : 2000,
   medium : 1500,
-  small : 1000
+  small : 1000,
+  delivery : 200
 }
 
 var toppings = 
@@ -109,8 +110,6 @@ var crust =
   hard : 200,
   soft : 180
 }
-
-var delivery = 200;
 
 function Pizza(size, topping, base) {
   this.size = size;
@@ -219,7 +218,7 @@ $(document).ready(function()
 
     var newPizza = new Pizza(inputtedSize, inputtedTop, inputtedCrust);
 
-    $("#submit").last().click(function() {
+    $("#submit").click(function() {
       $("#show-order").show();
       $(".meat").text(newPizza.size);
       $(".top").text(newPizza.topping);
@@ -237,7 +236,12 @@ $(document).ready(function()
 
       newLocation = new Location(inputtedEstate, inputtedHouse, inputtedPhone);
       alert("we will deliver to your location");
+      var finalCost = totalCost + price.delivery
+      alert("Yout total cost is " +finalCost);
+    });
 
+    $(".no").click(function(){
+      alert("you will be notified when your order is ready")
     });
 
 
