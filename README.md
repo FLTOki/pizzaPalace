@@ -34,7 +34,7 @@ Built by: Musyoki Jim.
 ## About The Project
 
 <p>Customers can chose what size of pizza they want, the preferred toppings and crust. The customers can also decide whether or not they want their pizza delivered</p>
-[Live Demo](fltoki.github.io/pizzaPalace)
+* [LiveDemo](fltoki.github.io/pizzaPalace)
 <a href="https://github.com/othneildrew/Best-README-Template">
   <img src="assets/images/landing_page.png" alt="Logo" width="850" height="650">
 </a>
