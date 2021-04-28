@@ -8,11 +8,19 @@
   background-image: url('../assets/images/welcome.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  padding: 300px;
+  padding: 250px;
   text-align: center;
   font-size: 100px;
   color: white;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#p_tag
+{
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  font-size: 30px;
 }
 
 h2
