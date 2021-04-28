@@ -33,8 +33,8 @@
 Built by: Musyoki Jim.
 ## About The Project
 
-<p>Customers can chose what size of pizza they want, the preferred toppings and crust. The customers can also decide whether or not they want their pizza delivered</p>
-* [LiveDemo](fltoki.github.io/pizzaPalace)
+<p> View the live demo <a href ="https://fltoki.github.io/pizzaPalace">here</a> </p>
+<p>This project allows you to pick the type of pizza you want to order. You can then specify the toppings you want, crust and number of pizzas you'd like. Your total cost is calculated and displayed. You can then choose whether or not you want it to be delivered, if yes, you are prompted to enter yur delivery location details.</p>
 <a href="https://github.com/othneildrew/Best-README-Template">
   <img src="assets/images/landing_page.png" alt="Logo" width="850" height="650">
 </a>
